@@ -1,22 +1,28 @@
 body{
-	margin:0;
+	font-family:Calibri;
+	
 }
 
 header{
 	background:#999;
 	color:white;
-	margin-bottom:-20px;
 	
 	
+	
+}
+
+a{
+	text-decoration: none;
 }
 
 
 header h1{
 	margin-right:30px;
-	margin-left:50px;
+	margin-left:30px;
 	
 	
 }
+
 
 .inlineLogoSearch{
 	display:inline-block;
@@ -28,7 +34,7 @@ header h1{
 
 
 nav input[type="text"] {
-
+    margin-left:10%;
     width:500px;
 	height:20px;
  
@@ -58,6 +64,7 @@ nav input[type="text"] {
 
 
 .horizontalMenu li{
+	border-left: 4px solid red;
 	list-style-type:none;
 	display:inline-block;
 	padding-right:50px;
@@ -66,52 +73,65 @@ nav input[type="text"] {
 }
 
 .horizontalMenu a{
+	
 	color:white;
 
 }
 
 
 
-.verticalMenu ul {
+
+
+.verticalMenu {
 	margin:0;
-	padding:0;
+	width:10%;
 	background:black;
-	height:100%;
-	overflow: auto;
-	position: fixed;
+	border:solid 3px cyan;
+	
+	
 	
 	
 }
 
 .verticalMenu li{
+	background:#ff2d2d;
 	display: block;
-	
-	color:white;
 	list-style-type:none;
-	padding: 10px 15px;
+	padding-bottom:15px;
+	padding-top:15px;
+	margin-left:-40px;
+	text-align:center;
+	border:solid 3px #fffc00;
 	
 }
+
+.verticalMenu li a:hover:not(.active){
+	background-color: #4CAF50;
+}
+
+.verticalMenu li a{
+	color:white;
+	padding:10px;
+}
+
 
 
 .mainContent{
 	background:silver;
-}
-
-.menuContentFloat{
-	padding-left:150px;
+	height:1000px;
 	
 }
 
-.verticalMenu ul li a{
-	color:white;
-}
-
-
-article{
-	
+.articles{
+	margin-top:-250px;
+	margin-left:200px;
 	background:lime;
-	width:auto;
+	
 }
+
+
+
+
 
 footer{
 	padding-top:50%;
