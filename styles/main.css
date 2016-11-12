@@ -1,0 +1,126 @@
+body{
+	margin:0;
+}
+
+header{
+	background:#999;
+	color:white;
+	margin-bottom:-20px;
+	
+	
+}
+
+
+header h1{
+	margin-right:30px;
+	margin-left:50px;
+	
+	
+}
+
+.inlineLogoSearch{
+	display:inline-block;
+	margin-right:-4px;
+	
+	
+	
+}
+
+
+nav input[type="text"] {
+
+    width:500px;
+	height:20px;
+ 
+}
+
+
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+	
+	
+	
+}
+
+.button1 {
+	width:100px;
+	height:25px;
+	
+	}
+
+
+
+
+.horizontalMenu li{
+	list-style-type:none;
+	display:inline-block;
+	padding-right:50px;
+	padding-left:40px;
+
+}
+
+.horizontalMenu a{
+	color:white;
+
+}
+
+
+
+.verticalMenu ul {
+	margin:0;
+	padding:0;
+	background:black;
+	height:100%;
+	overflow: auto;
+	position: fixed;
+	
+	
+}
+
+.verticalMenu li{
+	display: block;
+	
+	color:white;
+	list-style-type:none;
+	padding: 10px 15px;
+	
+}
+
+
+.mainContent{
+	background:silver;
+}
+
+.menuContentFloat{
+	padding-left:150px;
+	
+}
+
+.verticalMenu ul li a{
+	color:white;
+}
+
+
+article{
+	
+	background:lime;
+	width:auto;
+}
+
+footer{
+	padding-top:50%;
+}
+
+
+
+
+
+
+
+
