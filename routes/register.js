@@ -35,6 +35,7 @@ var errors = req.validationErrors();
 
 if(errors){
 	console.log('YES');
+    res.redirect('/register');
 } else {
 	/*var newUser = new User({
 		email: email,
@@ -55,7 +56,8 @@ if(errors){
 		password: password
 
 	});
-        
+
+    res.redirect('/register');
 
 	//req.flash('success_msg', 'You are now registered');
 	//res.redirect('/account');

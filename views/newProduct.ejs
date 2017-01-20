@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include templates/head.ejs %>
+</head>
+<body>
+<header>
+    <% include templates/header.ejs %>
+</header>
+
+<br/>
+<h1>Add new product</h1>
+
+<form method="post" action="/newProduct" class="accountform inline accflexitem" name="addProduct">
+    <p>TITLE:
+        <input type="text" name="title"></p>
+
+
+        <textarea class="accountform inline accflexitem" rows="4" cols="50" name="comment">
+        Enter text here...</textarea>
+
+        <input type="submit" value="Create">
+
+</form>
+
+
+
+
+
+
+
+
+<footer class="second cart">
+    <% include templates/footer.ejs %>
+</footer>
+</body>
+</html>

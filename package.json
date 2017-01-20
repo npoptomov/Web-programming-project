@@ -14,17 +14,18 @@
     "debug": "~2.2.0",
     "ejs": "~2.5.2",
     "express": "~4.14.0",
+    "express-flash": "0.0.2",
     "express-handlebars": "*",
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
-    "morgan": "~1.7.0",
-    "sequelize": "^3.28.0",
-    "serve-favicon": "~2.3.0",
     "mongodb": "*",
     "mongoose": "*",
+    "morgan": "~1.7.0",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "sequelize": "^3.28.0",
+    "serve-favicon": "~2.3.0"
   }
 }

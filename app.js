@@ -6,9 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var expressValidator = require('express-validator');
-var flash = require('connect-flash');
+var flash = require('express-flash');
+//var flash = require('connect-flash');
 var session = require('express-session');
-var passport = require('passport');
+
+var setupPassport = require('./config/passportConfig');
 
 
 /*var mongo = require('mongodb');
@@ -24,30 +26,17 @@ var cart = require('./routes/cart');
 var account = require('./routes/account');
 var register = require('./routes/register');
 var products = require('./routes/products');
+var dashboard = require('./routes/dashboard');
+var newProduct = require('./routes/newProduct');
 
 var app = express();
 
 
-app.use(session({
-	         secret: 'keyboard cat',
-		 resave: false,
-		 saveUninitialized: true,
-	         cookie: { secure: true   }
-}));
-
-app.use(flash());
-
-app.use(require('connect-flash')());
-app.use(function (req, res, next) {
-	  res.locals.messages = require('express-messages')(req, res);
-	    next();
-
-});
 
 
 
-app.use(passport.initialize());
-app.use(passport.session());
+
+
 
 
 
@@ -63,12 +52,34 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressValidator());
+
+
+app.use(session({ secret: '4564f6s4fdsfdfd', resave: false, saveUninitialized: false }));
+
+app.use(flash());
+/*app.use(function(req, res, next) {
+    res.locals.errorMessage = req.flash('error')
+    next()
+}); */
+
+
+
+
+
+setupPassport(app);
+
+app.get('/logOut', function(req, res) {
+    req.logout();
+    res.redirect('/')
+});
 app.use('/', index);
 app.use('/users', users);
 app.use('/cart', cart);
 app.use('/account', account);
 app.use('/register', register);
 app.use('/products', products);
+app.use('/dashboard', dashboard);
+app.use('/newProduct', newProduct);
 
 /*app.use(function (req,res,next){
 	res.locals.success_msg = req.flash('success_msg');
@@ -76,6 +87,9 @@ app.use('/products', products);
 	res.locals.error = req.flash('error');
 	next();
 });*/
+
+
+
 
 
 
